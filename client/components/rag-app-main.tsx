@@ -143,8 +143,8 @@ export default function PDFRagApp() {
                 <div className="flex-1 overflow-hidden">
                   {uploadedFiles.length === 0 ? (
                     <div className="h-full flex flex-col items-center justify-center p-8 text-center">
-                      <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl mb-6">
-                        <FileText className="h-12 w-12 text-blue-600 mx-auto" />
+                      <div className="p-4 lg:p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl mb-2 lg:mb-6">
+                        <FileText className="h-7 w-7 lg:h-12 lg:w-12 text-blue-600 mx-auto" />
                       </div>
                       <div className="space-y-2">
                         <p className="text-lg font-semibold text-slate-900">No PDFs uploaded</p>
