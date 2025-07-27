@@ -21,6 +21,7 @@ export default function PDFRagApp() {
   const [messages, setMessages] = useState<Message[]>([])
   const [inputMessage, setInputMessage] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  
   const fileInputRef = useRef<HTMLInputElement>(null)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
@@ -290,7 +291,7 @@ export default function PDFRagApp() {
                 </div>
 
                 {/* Input Area */}
-                <div className="border-t border-slate-200/60 p-4 bg-gradient-to-r from-slate-50/50 to-indigo-50/50 flex-shrink-0">
+                <div className="border-t border-slate-200/60 p-4 bg-gradient-to-r from-slate-200/50 to-indigo-200/50 flex-shrink-0">
                   <div className="flex gap-3">
                     <Input
                       value={inputMessage}
@@ -302,7 +303,7 @@ export default function PDFRagApp() {
                           : "Upload PDFs first to start chatting"
                       }
                       disabled={uploadedFiles.length === 0 || isLoading}
-                      className="flex-1 bg-white/80 border-slate-200/60 focus:border-blue-300 focus:ring-blue-200/50 rounded-xl"
+                      className="flex-1 bg-white/80 border-slate-200/60 focus:border-blue-300 focus:ring-blue-200/50 rounded-xl text-sm"
                     />
                     <Button
                       onClick={handleSendMessage}
